@@ -1,0 +1,200 @@
+/*
+ * Markdown PDF CSS
+ */
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgb(71, 176, 248);
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+
+
+
+/* for inline code
+:not(pre):not(.hljs)>code {
+	color: #f5cf37;
+	font-size: inherit;
+	background-color: rgb(10, 10, 10);
+	margin: 3px;
+	font-style: bold;
+	border-radius: 4px;
+	padding: 2px 4px;
+	font-size: medium;
+} */
+/* for inline code */
+/* Inline code style ala Monokai Sublime */
+:not(pre):not(.hljs)>code {
+	color: #f8f8f2;
+	/* Teks Monokai putih lembut */
+	font-size: 0.9em;
+	background-color: #272822;
+	/* Latar Monokai */
+	margin: 0 2px;
+	font-weight: 500;
+	/* Semi-bold, biar tidak terlalu berat */
+	border-radius: 6px;
+	padding: 4px 8px;
+	line-height: 1.4;
+	display: inline-block;
+	vertical-align: baseline;
+	/* border: 1px solid rgba(248, 248, 242, 0.1); */
+	/* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); */
+	font-family: "Fira Code", "Consolas", monospace;
+	/* Font coding */
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+
+/* =============================
+   Carbon-like code block for Markdown → PDF
+   Append this at the END of your CSS file
+   Tweak: --carbon-gap untuk jarak isi ke header
+   ============================= */
+:root {
+	--carbon-header-h: 36px;
+	/* tinggi header bar */
+	--carbon-gap: 22px;
+	/* jarak antara header dan isi kode (ubah lebih besar jika perlu) */
+	--carbon-dot-size: 10px;
+	/* ukuran titik */
+	--carbon-dot-gap: 18px;
+	/* jarak antar titik */
+	--carbon-left: 12px;
+	/* jarak titik dari kiri */
+}
+
+/* Target umum untuk code block (letakkan setelah aturan pre yang lain) */
+pre {
+	position: relative;
+	box-sizing: border-box;
+	background: #272822 !important;
+	color: #f8f8f2;
+	border-radius: 8px;
+	border: 1px solid rgba(248, 248, 242, 0.08);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+	margin: 1.5em 0;
+	padding: 1em;
+	/* padding sisi */
+	/* padding-top = header height + gap */
+	padding-top: calc(var(--carbon-header-h) + var(--carbon-gap));
+	overflow: auto;
+	white-space: pre;
+	/* preserve formatting; change ke pre-wrap kalau mau wrap */
+	hyphens: none;
+}
+
+/* header bar (strip di atas) */
+pre::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--carbon-header-h);
+	background: #1e1f1c;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+	z-index: 2;
+	pointer-events: none;
+}
+
+/* tiga titik (merah, kuning, hijau) */
+pre::after {
+	content: "";
+	position: absolute;
+	top: calc((var(--carbon-header-h) - var(--carbon-dot-size)) / 2);
+	left: var(--carbon-left);
+	width: var(--carbon-dot-size);
+	height: var(--carbon-dot-size);
+	background: #ff5f56;
+	border-radius: 50%;
+	box-shadow:
+		calc(var(--carbon-dot-gap)) 0 0 0 #ffbd2e,
+		calc(var(--carbon-dot-gap) * 2) 0 0 0 #27c93f;
+	z-index: 3;
+	pointer-events: none;
+}
+
+/* kode di dalam pre (reset padding/margin supaya mengikuti pre) */
+pre code {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-family: "Fira Code", "Consolas", monospace;
+	font-size: 14px;
+	line-height: 1.6;
+	color: inherit;
+	white-space: pre;
+	/* atau pre-wrap jika ingin membungkus baris panjang */
+	position: relative;
+	z-index: 1;
+}
+
+/* jika ada rule pre:not(.hljs) di file sebelumnya, pastikan override */
+pre:not(.hljs) {
+	padding-top: calc(var(--carbon-header-h) + var(--carbon-gap));
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	line-height: 1.6;
+}
+
+/* optional: manual "syntax" classes (jika engine highlight memberi class tersebut) */
+pre code .keyword {
+	color: #f92672;
+}
+
+pre code .string {
+	color: #e6db74;
+}
+
+pre code .number {
+	color: #ae81ff;
+}
+
+pre code .function {
+	color: #a6e22e;
+}
+
+pre code .comment {
+	color: #75715e;
+	font-style: italic;
+}
