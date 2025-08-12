@@ -1,4 +1,4 @@
-<img src="pdf-config/dart.png" style="border-radius:10px">
+<img src="pdf-config/mobile.png" style="border-radius:10px">
 
 <!-- # Modul Pemrograman Mobile (Dart) -->
 
