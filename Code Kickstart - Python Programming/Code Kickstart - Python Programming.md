@@ -81,6 +81,7 @@ Python 2.x mungkin sudah terinstal secara default di macOS, tetapi kita akan men
 Sebagian besar distribusi Linux sudah memiliki Python terinstal. Anda bisa menginstal Python 3.x dengan perintah berikut:
 
 ```bash
+
 sudo apt update
 sudo apt install python3 python3-pip
 ```
@@ -90,6 +91,7 @@ sudo apt install python3 python3-pip
 Setelah instalasi selesai, buka Terminal (macOS/Linux) atau Command Prompt (Windows) dan ketik perintah berikut untuk memverifikasi bahwa Python telah terinstal dengan benar:
 
 ```bash
+
 python3 --version
 ```
 
@@ -103,6 +105,7 @@ Mari kita tulis program Python pertama kita. Ini adalah tradisi di dunia pemrogr
 2.  **Tulis Kode**: Ketik baris kode berikut:
 
     ```python
+
     print("Hello, World!")
     ```
 
@@ -111,6 +114,7 @@ Mari kita tulis program Python pertama kita. Ini adalah tradisi di dunia pemrogr
 4.  **Jalankan Program**: Buka Terminal atau Command Prompt, navigasikan ke direktori tempat Anda menyimpan file, lalu jalankan program dengan perintah:
 
     ```bash
+
     python3 hello.py
     ```
 
@@ -129,12 +133,14 @@ Python juga dilengkapi dengan interpreter interaktif yang disebut REPL (Read-Eva
 Untuk masuk ke REPL, cukup ketik `python3` di Terminal/Command Prompt Anda:
 
 ```bash
+
 python3
 ```
 
 Anda akan melihat prompt `>>>`. Sekarang Anda bisa mengetik kode Python langsung di sini:
 
 ```python
+
 >>> print("Halo, ini dari REPL!")
 Halo, ini dari REPL!
 >>> 5 + 3
@@ -153,6 +159,7 @@ Ada dua jenis komentar di Python:
 1.  **Komentar Baris Tunggal**: Dimulai dengan tanda `#`.
 
     ```python
+
     # Ini adalah komentar satu baris
     print("Ini adalah kode") # Komentar juga bisa diletakkan setelah kode
     ```
@@ -160,6 +167,7 @@ Ada dua jenis komentar di Python:
 2.  **Komentar Multi-Baris (Docstrings)**: Menggunakan tiga tanda kutip (`'''` atau `"""`). Ini sering digunakan untuk dokumentasi fungsi atau modul.
 
     ```python
+
     '''
     Ini adalah komentar multi-baris.
     Bisa mencakup beberapa baris.
@@ -203,6 +211,7 @@ Variabel adalah lokasi memori bernama yang digunakan untuk menyimpan nilai. Dala
 #### Contoh Penamaan Variabel:
 
 ```python
+
 # Contoh yang benar
 my_variable = 10
 _private_var = "Ini rahasia"
@@ -219,6 +228,7 @@ angka1 = 20
 Anda memberikan nilai ke variabel menggunakan operator penugasan (`=`):
 
 ```python
+
 pesan = "Halo Dunia!" # Variabel string
 umur = 30            # Variabel integer
 harga = 19.99         # Variabel float
@@ -235,6 +245,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
     *   **`complex` (Complex Number)**: Bilangan kompleks (jarang digunakan dalam pemrograman umum). Contoh: `1 + 2j`.
 
     ```python
+
     bilangan_bulat = 100
     bilangan_desimal = 25.75
     ```
@@ -243,6 +254,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
     *   **`str` (String)**: Urutan karakter yang diapit oleh tanda kutip tunggal (`'`) atau ganda (`"`).
 
     ```python
+
     nama = "Budi"
     salam = 'Selamat Pagi'
     ```
@@ -251,6 +263,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
     *   **`bool` (Boolean)**: Hanya memiliki dua nilai: `True` atau `False`. Digunakan dalam logika kondisional.
 
     ```python
+
     apakah_hujan = False
     apakah_benar = True
     ```
@@ -261,6 +274,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
     *   **`range`**: Urutan angka yang tidak dapat diubah (sering digunakan dalam loop).
 
     ```python
+
     daftar_angka = [1, 2, 3, 4, 5]
     nama_buah = ("apel", "pisang", "ceri")
     ```
@@ -269,6 +283,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
     *   **`dict` (Dictionary)**: Koleksi item yang tidak terurut, dapat diubah, dan diindeks. Setiap item memiliki kunci dan nilai. Ditulis dengan kurung kurawal `{}`.
 
     ```python
+
     data_siswa = {"nama": "Andi", "umur": 20, "jurusan": "Informatika"}
     ```
 
@@ -277,6 +292,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
     *   **`frozenset`**: Mirip dengan set, tetapi tidak dapat diubah (immutable).
 
     ```python
+
     himpunan_warna = {"merah", "biru", "hijau"}
     ```
 
@@ -285,6 +301,7 @@ Python memiliki beberapa tipe data bawaan yang sering digunakan:
 Anda dapat menggunakan fungsi `type()` untuk mengetahui tipe data dari suatu variabel:
 
 ```python
+
 angka = 10
 print(type(angka)) # Output: <class 'int'>
 
@@ -309,6 +326,7 @@ print(type(kamus)) # Output: <class 'dict'>
 Python memungkinkan Anda untuk mengkonversi satu tipe data ke tipe data lain menggunakan fungsi bawaan seperti `int()`, `float()`, `str()`, dll.
 
 ```python
+
 # Konversi dari int ke float
 angka_int = 10
 angka_float = float(angka_int)
@@ -362,6 +380,7 @@ Kontrol alur (control flow) adalah konsep fundamental dalam pemrograman yang mem
 Pernyataan `if` digunakan untuk menjalankan blok kode hanya jika suatu kondisi bernilai `True`. Sintaks dasarnya adalah:
 
 ```python
+
 if kondisi:
     # Blok kode yang akan dieksekusi jika kondisi True
     # Perhatikan indentasi (spasi atau tab) di sini
@@ -370,6 +389,7 @@ if kondisi:
 **Contoh:**
 
 ```python
+
 umur = 18
 
 if umur >= 17:
@@ -383,6 +403,7 @@ Dalam contoh di atas, `umur >= 17` adalah kondisi. Jika kondisi ini `True` (yait
 Pernyataan `if-else` memungkinkan Anda untuk menjalankan satu blok kode jika kondisi `True`, dan blok kode lain jika kondisi `False`. Sintaksnya adalah:
 
 ```python
+
 if kondisi:
     # Blok kode jika kondisi True
 else:
@@ -392,6 +413,7 @@ else:
 **Contoh:**
 
 ```python
+
 nilai = 75
 
 if nilai >= 60:
@@ -407,6 +429,7 @@ Di sini, jika `nilai` 60 atau lebih, pesan "Anda lulus ujian." akan dicetak. Jik
 Ketika Anda memiliki beberapa kondisi yang perlu diperiksa secara berurutan, Anda dapat menggunakan pernyataan `if-elif-else`. `elif` adalah singkatan dari "else if". Python akan memeriksa kondisi secara berurutan, dan akan mengeksekusi blok kode pertama yang kondisinya `True`.
 
 ```python
+
 if kondisi1:
     # Blok kode jika kondisi1 True
 elif kondisi2:
@@ -420,6 +443,7 @@ else:
 **Contoh:**
 
 ```python
+
 skor = 85
 
 if skor >= 90:
@@ -460,6 +484,7 @@ Anda dapat menggabungkan beberapa kondisi menggunakan operator logika:
 **Contoh `and`:**
 
 ```python
+
 umur = 25
 punya_sim = True
 
@@ -472,6 +497,7 @@ else:
 **Contoh `or`:**
 
 ```python
+
 hari = "Minggu"
 cuaca = "Cerah"
 
@@ -484,6 +510,7 @@ else:
 **Contoh `not`:**
 
 ```python
+
 is_libur = False
 
 if not is_libur:
@@ -495,6 +522,7 @@ if not is_libur:
 Python menggunakan indentasi (spasi atau tab) untuk menentukan blok kode. Ini sangat penting dan berbeda dengan bahasa pemrograman lain yang mungkin menggunakan kurung kurawal `{}`. Indentasi yang salah akan menyebabkan `IndentationError`.
 
 ```python
+
 # Contoh indentasi yang benar
 if True:
     print("Ini di dalam blok if")
@@ -527,6 +555,7 @@ Perulangan (loops) adalah salah satu konsep paling kuat dalam pemrograman. Merek
 #### Sintaks Dasar `for` Loop:
 
 ```python
+
 for item in iterable:
     # Blok kode yang akan dieksekusi untuk setiap item
 ```
@@ -534,6 +563,7 @@ for item in iterable:
 **Contoh 1: Mengulang List**
 
 ```python
+
 buah = ["apel", "pisang", "ceri"]
 for x in buah:
     print(x)
@@ -549,6 +579,7 @@ ceri
 **Contoh 2: Mengulang String**
 
 ```python
+
 for karakter in "Python":
     print(karakter)
 ```
@@ -574,6 +605,7 @@ Fungsi `range()` sering digunakan dengan `for` loop untuk menghasilkan urutan an
 **Contoh Penggunaan `range()`:**
 
 ```python
+
 # Mengulang 5 kali (dari 0 sampai 4)
 for i in range(5):
     print(i)
@@ -597,6 +629,7 @@ for i in range(0, 10, 2):
 #### Sintaks Dasar `while` Loop:
 
 ```python
+
 while kondisi:
     # Blok kode yang akan dieksekusi selama kondisi True
 ```
@@ -604,6 +637,7 @@ while kondisi:
 **Contoh:**
 
 ```python
+
 count = 1
 while count <= 5:
     print(count)
@@ -631,6 +665,7 @@ Anda dapat mengontrol alur perulangan lebih lanjut menggunakan pernyataan `break
 **Contoh `break`:**
 
 ```python
+
 for i in range(10):
     if i == 5:
         break # Hentikan loop ketika i adalah 5
@@ -649,6 +684,7 @@ Output:
 **Contoh `continue`:**
 
 ```python
+
 for i in range(10):
     if i % 2 == 0: # Jika i adalah angka genap
         continue   # Lewati iterasi ini
@@ -671,6 +707,7 @@ Anda dapat menempatkan satu perulangan di dalam perulangan lain. Ini disebut per
 **Contoh: Mencetak Pola Bintang**
 
 ```python
+
 for i in range(3): # Loop luar untuk baris
     for j in range(4): # Loop dalam untuk kolom
         print("*", end="") # Cetak bintang tanpa baris baru
@@ -691,6 +728,7 @@ Perulangan bersarang sangat berguna untuk membuat pola-pola geometris sederhana 
 **Contoh: Segitiga Bintang Kanan**
 
 ```python
+
 n = 5
 for i in range(1, n + 1):
     for j in range(i):
@@ -710,6 +748,7 @@ Output:
 **Contoh: Segitiga Bintang Terbalik**
 
 ```python
+
 n = 5
 for i in range(n, 0, -1):
     for j in range(i):
@@ -763,6 +802,7 @@ Dalam Python, Anda mendefinisikan fungsi menggunakan kata kunci `def`, diikuti d
 #### Sintaks Dasar:
 
 ```python
+
 def nama_fungsi():
     # Blok kode fungsi
     print("Halo dari fungsi!")
@@ -773,12 +813,14 @@ def nama_fungsi():
 Setelah fungsi didefinisikan, Anda dapat memanggilnya dengan menggunakan nama fungsi diikuti dengan tanda kurung:
 
 ```python
+
 nama_fungsi() # Memanggil fungsi yang telah didefinisikan
 ```
 
 **Contoh:**
 
 ```python
+
 def sapa():
     print("Selamat pagi!")
 
@@ -793,6 +835,7 @@ Fungsi dapat menerima input yang disebut parameter (atau argumen). Parameter ada
 #### Sintaks:
 
 ```python
+
 def nama_fungsi(parameter1, parameter2):
     # Blok kode fungsi yang menggunakan parameter
 ```
@@ -800,6 +843,7 @@ def nama_fungsi(parameter1, parameter2):
 **Contoh:**
 
 ```python
+
 def sapa_nama(nama):
     print(f"Halo, {nama}!")
 
@@ -810,6 +854,7 @@ sapa_nama("Andi")   # Output: Halo, Andi!
 Anda juga bisa memiliki beberapa parameter:
 
 ```python
+
 def tambah(angka1, angka2):
     hasil = angka1 + angka2
     print(f"Hasil penjumlahan: {hasil}")
@@ -825,6 +870,7 @@ Fungsi tidak hanya dapat melakukan tindakan, tetapi juga dapat mengembalikan nil
 #### Sintaks:
 
 ```python
+
 def nama_fungsi(parameter):
     # Lakukan sesuatu
     return nilai_yang_dikembalikan
@@ -833,6 +879,7 @@ def nama_fungsi(parameter):
 **Contoh:**
 
 ```python
+
 def kali(a, b):
     return a * b
 
@@ -849,6 +896,7 @@ Fungsi dapat mengembalikan berbagai tipe data, termasuk angka, string, boolean, 
 Anda dapat memberikan nilai default untuk parameter. Jika argumen tidak diberikan saat memanggil fungsi, nilai default akan digunakan.
 
 ```python
+
 def sapa_kota(nama, kota="Jakarta"):
     print(f"Halo {nama}, selamat datang di {kota}!")
 
@@ -861,6 +909,7 @@ sapa_kota("Rudi", "Bandung") # Output: Halo Rudi, selamat datang di Bandung!
 Anda dapat memanggil fungsi dengan argumen kata kunci, di mana Anda secara eksplisit menyebutkan nama parameter saat memanggil fungsi. Ini membuat kode lebih mudah dibaca dan memungkinkan Anda untuk melewati urutan argumen.
 
 ```python
+
 def info_siswa(nama, usia, jurusan):
     print(f"Nama: {nama}, Usia: {usia}, Jurusan: {jurusan}")
 
@@ -878,6 +927,7 @@ Kadang-kadang Anda mungkin tidak tahu berapa banyak argumen yang akan dilewatkan
 **Contoh `*args`:**
 
 ```python
+
 def jumlahkan_semua(*angka):
     total = 0
     for num in angka:
@@ -891,6 +941,7 @@ print(jumlahkan_semua(10, 20, 30, 40)) # Output: 100
 **Contoh `**kwargs`:**
 
 ```python
+
 def tampilkan_info(**data):
     for kunci, nilai in data.items():
         print(f"{kunci}: {nilai}")
@@ -912,6 +963,7 @@ tampilkan_info(produk="Laptop", harga=1200, stok=50)
 Sangat disarankan untuk mendokumentasikan fungsi Anda menggunakan docstrings. Docstring adalah string multi-baris yang ditempatkan tepat setelah definisi fungsi. Ini menjelaskan apa yang dilakukan fungsi, parameternya, dan apa yang dikembalikannya.
 
 ```python
+
 def hitung_luas_persegi(panjang, lebar):
     """
     Fungsi ini menghitung luas persegi panjang.
@@ -955,6 +1007,7 @@ List adalah koleksi item yang terurut dan dapat diubah (mutable). Artinya, Anda 
 #### Membuat List:
 
 ```python
+
 # List kosong
 list_kosong = []
 
@@ -969,6 +1022,7 @@ campur = [1, "hello", True, 3.14]
 Anda dapat mengakses item list menggunakan indeksnya. Indeks dimulai dari 0.
 
 ```python
+
 my_list = ["a", "b", "c", "d", "e"]
 
 print(my_list[0]) # Output: a (item pertama)
@@ -984,6 +1038,7 @@ print(my_list[-2]) # Output: d (item kedua terakhir)
 Anda dapat mengambil sebagian dari list (sub-list) menggunakan slicing. Sintaksnya adalah `list[start:end:step]`.
 
 ```python
+
 angka = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 print(angka[2:5])   # Output: [2, 3, 4] (dari indeks 2 hingga sebelum 5)
@@ -998,6 +1053,7 @@ print(angka[::-1])  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] (membalik list)
 Karena list bersifat mutable, Anda dapat mengubah nilai item tertentu:
 
 ```python
+
 buah = ["apel", "pisang", "ceri"]
 buah[1] = "mangga" # Mengubah item di indeks 1
 print(buah) # Output: ["apel", "mangga", "ceri"]
@@ -1010,6 +1066,7 @@ print(buah) # Output: ["apel", "mangga", "ceri"]
 *   `extend()`: Menambah item dari iterable lain ke akhir list.
 
 ```python
+
 my_list = [1, 2, 3]
 my_list.append(4)      # Menambah 4 ke akhir
 print(my_list)         # Output: [1, 2, 3, 4]
@@ -1030,6 +1087,7 @@ print(my_list)         # Output: [1, 99, 2, 3, 4, 5, 6]
 *   `clear()`: Menghapus semua item dari list.
 
 ```python
+
 my_list = [1, 2, 3, 2, 4]
 my_list.remove(2) # Menghapus 2 yang pertama ditemukan
 print(my_list)    # Output: [1, 3, 2, 4]
@@ -1055,6 +1113,7 @@ print(my_list)  # Output: []
 *   `reverse()`: Membalik urutan item dalam list secara in-place.
 
 ```python
+
 angka = [3, 1, 4, 1, 5, 9, 2]
 print(len(angka))    # Output: 7
 print(angka.count(1)) # Output: 2
@@ -1074,6 +1133,7 @@ Dictionary adalah koleksi item yang tidak terurut, dapat diubah (mutable), dan d
 #### Membuat Dictionary:
 
 ```python
+
 # Dictionary kosong
 dict_kosong = {}
 
@@ -1093,6 +1153,7 @@ barang = {"item": "Laptop", "harga": 1200, "stok": 50}
 Anda dapat mengakses nilai menggunakan kuncinya:
 
 ```python
+
 person = {"nama": "Alice", "umur": 30, "kota": "New York"}
 
 print(person["nama"]) # Output: Alice
@@ -1109,6 +1170,7 @@ print(person.get("pekerjaan", "Tidak diketahui")) # Output: Tidak diketahui
 Anda dapat mengubah nilai item dengan mengakses kuncinya. Jika kunci tidak ada, item baru akan ditambahkan.
 
 ```python
+
 person = {"nama": "Alice", "umur": 30, "kota": "New York"}
 
 person["umur"] = 31 # Mengubah nilai kunci "umur"
@@ -1126,6 +1188,7 @@ print(person)             # Output: {"nama": "Alice", "umur": 31, "kota": "New Y
 *   `clear()`: Menghapus semua item dari dictionary.
 
 ```python
+
 person = {"nama": "Alice", "umur": 31, "kota": "New York", "pekerjaan": "Engineer"}
 
 pekerjaan_dihapus = person.pop("pekerjaan")
@@ -1147,6 +1210,7 @@ print(person) # Output: {}
 *   `items()`: Mengembalikan objek view dari semua pasangan kunci-nilai (sebagai tuple).
 
 ```python
+
 barang = {"item": "Laptop", "harga": 1200, "stok": 50}
 
 print(len(barang))      # Output: 3
@@ -1176,6 +1240,7 @@ for kunci, nilai in barang.items():
     *   Cetak semua kunci dan nilai dalam `data_buku` menggunakan loop.
 3.  Buat sebuah list berisi dictionary, di mana setiap dictionary merepresentasikan seorang siswa dengan kunci `nama` dan `nilai`. Hitung rata-rata nilai semua siswa.
     ```python
+
     siswa = [
         {"nama": "Ani", "nilai": 85},
         {"nama": "Budi", "nilai": 90},
@@ -1198,6 +1263,7 @@ Untuk bekerja dengan file, langkah pertama adalah membukanya. Fungsi `open()` di
 #### Sintaks `open()`:
 
 ```python
+
 file_object = open("nama_file.txt", "mode")
 ```
 
@@ -1215,6 +1281,7 @@ file_object = open("nama_file.txt", "mode")
 Setelah selesai, gunakan metode `close()`:
 
 ```python
+
 file = open("contoh.txt", "r")
 # Lakukan operasi file
 file.close()
@@ -1225,6 +1292,7 @@ file.close()
 Cara terbaik untuk menangani file di Python adalah dengan menggunakan `with` statement. Ini memastikan bahwa file akan secara otomatis ditutup, bahkan jika terjadi error selama operasi file. Ini adalah praktik terbaik karena Anda tidak perlu secara eksplisit memanggil `close()`.
 
 ```python
+
 with open("contoh.txt", "r") as file:
     # Lakukan operasi file di sini
     pass # Placeholder
@@ -1238,6 +1306,7 @@ Ada beberapa cara untuk membaca konten dari file teks:
 1.  **`read()`**: Membaca seluruh konten file sebagai satu string.
 
     ```python
+
     with open("data.txt", "r") as file:
         konten = file.read()
         print(konten)
@@ -1246,6 +1315,7 @@ Ada beberapa cara untuk membaca konten dari file teks:
 2.  **`readline()`**: Membaca satu baris dari file.
 
     ```python
+
     with open("data.txt", "r") as file:
         baris1 = file.readline()
         baris2 = file.readline()
@@ -1256,6 +1326,7 @@ Ada beberapa cara untuk membaca konten dari file teks:
 3.  **`readlines()`**: Membaca semua baris dari file dan mengembalikannya sebagai list string, di mana setiap string adalah satu baris.
 
     ```python
+
     with open("data.txt", "r") as file:
         semua_baris = file.readlines()
         for baris in semua_baris:
@@ -1265,6 +1336,7 @@ Ada beberapa cara untuk membaca konten dari file teks:
 4.  **Iterasi Langsung pada Objek File (Paling Efisien)**: Mengulang baris demi baris.
 
     ```python
+
     with open("data.txt", "r") as file:
         for baris in file:
             print(baris.strip())
@@ -1275,6 +1347,7 @@ Ada beberapa cara untuk membaca konten dari file teks:
 1.  **`write()`**: Menulis string ke file. Anda harus secara eksplisit menambahkan karakter newline (`\n`) jika Anda ingin setiap tulisan berada di baris baru.
 
     ```python
+
     with open("output.txt", "w") as file:
         file.write("Baris pertama.\n")
         file.write("Baris kedua.\n")
@@ -1283,6 +1356,7 @@ Ada beberapa cara untuk membaca konten dari file teks:
 2.  **`writelines()`**: Menulis list string ke file. Setiap string dalam list dianggap sebagai satu baris, tetapi Anda masih perlu menambahkan `\n` secara manual jika ingin baris baru.
 
     ```python
+
     daftar_baris = ["Ini baris A.\n", "Ini baris B.\n", "Ini baris C.\n"]
     with open("output_list.txt", "w") as file:
         file.writelines(daftar_baris)
@@ -1297,6 +1371,7 @@ Python memiliki modul bawaan bernama `csv` yang sangat memudahkan pekerjaan deng
 #### Membaca File CSV:
 
 ```python
+
 import csv
 
 with open("data.csv", "r") as file:
@@ -1328,6 +1403,7 @@ Header: ['Nama', 'Usia', 'Kota']
 `csv.DictReader` sangat berguna karena membaca setiap baris sebagai dictionary, di mana kunci adalah nama kolom dari baris header.
 
 ```python
+
 import csv
 
 with open("data.csv", "r") as file:
@@ -1346,6 +1422,7 @@ Nama: Citra, Usia: 22, Kota: Surabaya
 #### Menulis ke File CSV:
 
 ```python
+
 import csv
 
 data = [
@@ -1366,6 +1443,7 @@ print("Data berhasil ditulis ke output.csv")
 #### Menulis CSV dari Dictionary (DictWriter):
 
 ```python
+
 import csv
 
 fieldnames = ["Nama", "Usia", "Kota"]
@@ -1423,6 +1501,7 @@ Kita akan membangun kalkulator berbasis teks yang dapat melakukan operasi dasar:
 #### Kode Kalkulator Sederhana:
 
 ```python
+
 def tambah(x, y):
     """Menjumlahkan dua angka."""
     return x + y
@@ -1509,6 +1588,7 @@ Proyek ini akan mensimulasikan sistem pemungutan suara sederhana di mana penggun
 #### Kode Sistem Pemungutan Suara:
 
 ```python
+
 def sistem_pemungutan_suara():
     print("\n--- Sistem Pemungutan Suara Sederhana ---")
     kandidat = ["Alice", "Bob", "Charlie"]
