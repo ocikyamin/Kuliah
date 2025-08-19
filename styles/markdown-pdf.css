@@ -163,7 +163,7 @@ pre code {
 	font-size: 14px;
 	line-height: 1.6;
 	color: inherit;
-	white-space: pre;
+	white-space: pre-wrap;
 	/* atau pre-wrap jika ingin membungkus baris panjang */
 	position: relative;
 	z-index: 1;

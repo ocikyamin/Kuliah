@@ -1,26 +1,21 @@
 <img src="config/cover.png" style="border-radius:10px">
 
-# Bahasa Pemrograman PHP / MySQL
+# Modul Ajar Bahasa Pemrograman PHP / MySQL
 
 Modul ajar ini dirancang untuk memberikan pemahaman komprehensif tentang pengembangan web menggunakan PHP dan MySQL, mulai dari dasar hingga konsep lanjutan seperti Object-Oriented Programming (OOP), Model-View-Controller (MVC), dan penggunaan framework CodeIgniter 4. Modul ini terdiri dari 10 sesi praktikum yang berfokus pada penerapan langsung konsep-konsep yang diajarkan.
 
 ## Struktur Setiap Sesi Praktikum
 Setiap sesi praktikum akan memiliki struktur sebagai berikut:
-
 ### 1. Tujuan Pembelajaran
-Bagian ini menjelaskan apa yang diharapkan dapat dicapai oleh mahasiswa setelah menyelesaikan sesi praktikum.
-
+Bagian ini menjelaskan apa yang diharapkan dapat dicapai oleh peserta setelah menyelesaikan sesi praktikum.
 ### 2. Materi Pembelajaran
 Bagian ini berisi penjelasan detail mengenai konsep-konsep yang akan dipelajari, termasuk teori, sintaks, dan contoh penggunaan.
-
 ### 3. Pembahasan
 Bagian ini akan menguraikan langkah-langkah praktis dan implementasi dari materi yang telah dijelaskan, seringkali disertai dengan studi kasus atau skenario.
-
 ### 4. Contoh Kode
-Bagian ini menyediakan potongan kode yang relevan untuk setiap konsep yang dibahas, yang dapat langsung dicoba oleh mahasiswa.
-
+Bagian ini menyediakan potongan kode yang relevan untuk setiap konsep yang dibahas, yang dapat langsung dicoba oleh peserta.
 ### 5. Langkah-langkah Praktikum
-Bagian ini berisi instruksi langkah demi langkah untuk menyelesaikan tugas praktikum, memastikan mahasiswa dapat mengikuti dengan mudah dan menerapkan pengetahuan mereka.
+Bagian ini berisi instruksi langkah demi langkah untuk menyelesaikan tugas praktikum, memastikan peserta dapat mengikuti dengan mudah dan menerapkan pengetahuan mereka.
 
 ---
 
@@ -71,12 +66,12 @@ Berikut adalah daftar 10 sesi praktikum yang akan dibahas dalam modul ini:
 ---
 
 
-<div class="page"/>
+<div class="page">
 
 > ## Praktikum 1: Pengenalan PHP dan Sintaks Dasar
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami sejarah singkat dan kegunaan PHP dalam pengembangan web.
 *   Melakukan instalasi dan konfigurasi lingkungan pengembangan PHP (XAMPP/LAMPP).
 *   Mengenali dan menggunakan sintaks dasar PHP.
@@ -88,14 +83,21 @@ Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
 #### 2.1. Pengantar PHP
 PHP (Hypertext Preprocessor) adalah bahasa skrip sisi server yang dirancang khusus untuk pengembangan web. PHP dapat disematkan langsung ke dalam HTML. Sintaksnya mirip dengan C, Java, dan Perl, membuatnya mudah dipelajari. PHP adalah bahasa open-source dan sangat populer untuk membangun situs web dinamis dan aplikasi web. [1]
 
-#### 2.2. Instalasi Lingkungan Pengembangan (XAMPP/LAMPP)
-Untuk menjalankan kode PHP, kita memerlukan server web (seperti Apache), database (seperti MySQL), dan interpreter PHP. XAMPP (untuk Windows, macOS, Linux) atau LAMPP (untuk Linux) adalah paket perangkat lunak gratis yang menyediakan semua komponen ini dalam satu instalasi yang mudah. [2]
+#### 2.2. Instalasi Lingkungan Pengembangan (XAMPP/Laragon)
+Untuk menjalankan kode PHP, kita memerlukan server web (seperti Apache atau Nginx), database (seperti MySQL), dan interpreter PHP. XAMPP (untuk Windows, macOS, Linux) atau Laragon (untuk Windows) adalah paket perangkat lunak gratis yang menyediakan semua komponen ini dalam satu instalasi yang mudah. Laragon menawarkan lingkungan pengembangan yang cepat, portabel, terisolasi, dan modern, dengan dukungan untuk Apache, Nginx, MySQL, PostgreSQL, PHP, Node.js, dll. [2][3]
 
 **Langkah-langkah Instalasi XAMPP (Windows):**
 1.  Unduh XAMPP dari situs web resmi Apache Friends (apachefriends.org).
 2.  Jalankan installer dan ikuti petunjuk. Pastikan untuk memilih komponen Apache, MySQL, dan PHP.
 3.  Setelah instalasi selesai, buka XAMPP Control Panel.
 4.  Mulai modul Apache dan MySQL dengan mengklik tombol 'Start' di sampingnya.
+
+**Langkah-langkah Instalasi Laragon (Windows):**
+1.  Unduh Laragon dari situs web resmi Laragon (laragon.org).
+2.  Jalankan installer dan ikuti petunjuk.
+3.  Setelah instalasi selesai, buka Laragon. Klik 'Start All' untuk memulai Apache/Nginx dan MySQL.
+4.  Laragon secara otomatis mengkonfigurasi 'pretty URLs' dan virtual host, sehingga Anda bisa mengakses proyek langsung dari `http://nama_proyek.test`.
+
 
 #### 2.3. Sintaks Dasar PHP
 Kode PHP dieksekusi di sisi server dan hasilnya dikirimkan ke browser sebagai HTML biasa. Kode PHP harus diapit oleh tag pembuka `<?php` dan tag penutup `?>`. Setiap pernyataan di PHP harus diakhiri dengan titik koma (`;`).
@@ -143,7 +145,7 @@ Variabel digunakan untuk menyimpan informasi. Di PHP, variabel dimulai dengan ta
 ```php
 
 <?php
-$nama = "Yamin";
+$nama = "Budi";
 $umur = 20;
 $_gaji_pokok = 5000000;
 
@@ -233,71 +235,6 @@ Setelah menginstal XAMPP/LAMPP, Anda akan menempatkan file PHP Anda di direktori
 
 Perhatikan perbedaan antara operator `==` dan `===`. Operator `==` hanya membandingkan nilai, sedangkan `===` membandingkan nilai dan tipe data. Ini adalah konsep penting dalam PHP untuk menghindari bug yang tidak terduga.
 
-### 4. Contoh Kode
-
-**File: `hello.php`**
-```php
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello PHP</title>
-</head>
-<body>
-
-    <h1>Pengenalan PHP</h1>
-
-    <?php
-    // Ini adalah contoh sederhana PHP
-    echo "<p>Halo, dunia dari PHP!</p>";
-
-    $nama_depan = "John";
-    $nama_belakang = "Doe";
-    $umur_pengguna = 30;
-    $gaji = 1500.75;
-    $is_admin = true;
-
-    echo "<p>Nama Lengkap: " . $nama_depan . " " . $nama_belakang . "</p>";
-    echo "<p>Umur: " . $umur_pengguna . " tahun</p>";
-    echo "<p>Gaji: $" . $gaji . "</p>";
-    echo "<p>Status Admin: " . ($is_admin ? "Ya" : "Tidak") . "</p>";
-
-    $angka1 = 20;
-    $angka2 = 7;
-
-    echo "<p>Hasil Penjumlahan: " . ($angka1 + $angka2) . "</p>";
-    echo "<p>Hasil Pengurangan: " . ($angka1 - $angka2) . "</p>
-";
-    echo "<p>Hasil Perkalian: " . ($angka1 * $angka2) . "</p>";
-    echo "<p>Hasil Pembagian: " . ($angka1 / $angka2) . "</p>";
-    echo "<p>Sisa Bagi (Modulus): " . ($angka1 % $angka2) . "</p>";
-
-    $counter = 10;
-    echo "<p>Nilai awal counter: " . $counter . "</p>";
-    $counter++;
-    echo "<p>Setelah increment: " . $counter . "</p>";
-    $counter--;
-    echo "<p>Setelah decrement: " . $counter . "</p>";
-    ?>
-
-</body>
-</html>
-```
-
-### 5. Langkah-langkah Praktikum
-
-1.  **Instalasi XAMPP/LAMPP:**
-    *   Jika belum, unduh dan instal XAMPP (untuk Windows/macOS) atau LAMPP (untuk Linux) dari situs resmi Apache Friends.
-    *   Pastikan modul Apache dan MySQL berjalan di XAMPP Control Panel.
-
-2.  **Buat Direktori Proyek:**
-    *   Di dalam folder instalasi XAMPP Anda, navigasikan ke direktori `htdocs`.
-    *   Buat folder baru bernama `praktikum_php` di dalam `htdocs`.
-
-3.  **Buat File PHP Pertama Anda:**
-    *   Buka editor teks favorit Anda (misalnya VS Code, Sublime Text, Notepad++).
-    *   Salin dan tempel kode dari bagian 
-
 
 ### 4. Contoh Kode
 
@@ -351,22 +288,24 @@ Perhatikan perbedaan antara operator `==` dan `===`. Operator `==` hanya memband
 
 ### 5. Langkah-langkah Praktikum
 
-1.  **Instalasi XAMPP/LAMPP:**
-    *   Jika belum, unduh dan instal XAMPP (untuk Windows/macOS) atau LAMPP (untuk Linux) dari situs resmi Apache Friends.
-    *   Pastikan modul Apache dan MySQL berjalan di XAMPP Control Panel.
+1.  **Instalasi XAMPP/Laragon:**
+    *   Jika belum, unduh dan instal XAMPP (untuk Windows/macOS/Linux) atau Laragon (untuk Windows) dari situs resmi masing-masing.
+    *   Untuk XAMPP: Pastikan modul Apache dan MySQL berjalan di XAMPP Control Panel.
+    *   Untuk Laragon: Klik 'Start All' untuk memulai Apache/Nginx dan MySQL.
 
 2.  **Buat Direktori Proyek:**
-    *   Di dalam folder instalasi XAMPP Anda, navigasikan ke direktori `htdocs`.
-    *   Buat folder baru bernama `praktikum_php` di dalam `htdocs`.
+    *   **Untuk XAMPP:** Di dalam folder instalasi XAMPP, navigasikan ke direktori `htdocs` dan buat folder baru bernama `praktikum_php`.
+    *   **Untuk Laragon:** Buka folder `www` di direktori instalasi Laragon dan buat folder baru bernama `praktikum_php`.
 
 3.  **Buat File PHP Pertama Anda:**
     *   Buka editor teks favorit Anda (misalnya VS Code, Sublime Text, Notepad++).
     *   Salin dan tempel kode dari bagian "Contoh Kode" di atas ke dalam file baru.
-    *   Simpan file tersebut dengan nama `hello.php` di dalam folder `htdocs/praktikum_php`.
+    *   Simpan file tersebut dengan nama `hello.php` di dalam folder `htdocs/praktikum_php` (XAMPP) atau `www/praktikum_php` (Laragon).
 
 4.  **Akses Melalui Browser:**
     *   Buka browser web Anda.
-    *   Ketik `http://localhost/praktikum_php/hello.php` di bilah alamat dan tekan Enter.
+    *   **Untuk XAMPP:** Ketik `http://localhost/praktikum_php/hello.php` di bilah alamat dan tekan Enter.
+    *   **Untuk Laragon:** Ketik `http://praktikum_php.test/hello.php` di bilah alamat dan tekan Enter (Laragon secara otomatis mengkonfigurasi pretty URLs).
     *   Amati output yang ditampilkan di browser. Pastikan semua informasi ditampilkan dengan benar.
 
 5.  **Eksplorasi Variabel dan Operator:**
@@ -389,15 +328,15 @@ Perhatikan perbedaan antara operator `==` dan `===`. Operator `==` hanya memband
 ### Referensi
 [1] PHP.net. (n.d.). *What is PHP?*. Retrieved from [https://www.php.net/manual/en/intro-whatis.php](https://www.php.net/manual/en/intro-whatis.php)
 [2] Apache Friends. (n.d.). *XAMPP*. Retrieved from [https://www.apachefriends.org/](https://www.apachefriends.org/)
+[3] Laragon. (n.d.). *Laragon - Portable, Isolated, Fast & Powerful Universal Development Environment*. Retrieved from [https://laragon.org/](https://laragon.org/)
 
 
-<div class="page"/>
-
+<div class="page">
 
 > ## Praktikum 2: Struktur Kontrol dan Fungsi PHP
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Menggunakan struktur kondisional (if-else, elseif, switch) untuk mengontrol alur program.
 *   Menggunakan struktur perulangan (for, while, do-while, foreach) untuk mengulang blok kode.
 *   Membuat dan memanggil fungsi kustom di PHP.
@@ -502,7 +441,7 @@ foreach ($warna as $value) {
     echo $value . "<br>";
 }
 
-$mahasiswa = array("nama" => "Yamin", "umur" => 20, "jurusan" => "Informatika");
+$mahasiswa = array("nama" => "Budi", "umur" => 20, "jurusan" => "Informatika");
 foreach ($mahasiswa as $key => $value) {
     echo $key . ": " . $value . "<br>";
 }
@@ -682,7 +621,7 @@ Fungsi adalah kunci untuk membuat kode yang dapat digunakan kembali. Pertimbangk
     function ucapkanTerimaKasih($penerima = "Anda") {
         echo "<p>Terima kasih, " . $penerima . "!</p>";
     }
-    ucapkanTerimaKasih("Yamin");
+    ucapkanTerimaKasih("Budi");
     ucapkanTerimaKasih(); // Menggunakan nilai default
     ?>
 
@@ -693,13 +632,15 @@ Fungsi adalah kunci untuk membuat kode yang dapat digunakan kembali. Pertimbangk
 ### 5. Langkah-langkah Praktikum
 
 1.  **Buat File Baru:**
-    *   Buka editor teks Anda.
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Salin dan tempel kode dari bagian "Contoh Kode" di atas ke dalam file baru.
-    *   Simpan file tersebut dengan nama `kontrol_fungsi.php` di dalam folder `htdocs/praktikum_php` yang telah Anda buat sebelumnya.
+    *   Simpan file tersebut dengan nama `kontrol_fungsi.php` di dalam folder `htdocs/praktikum_php` (XAMPP) atau `www/praktikum_php` (Laragon) yang telah Anda buat sebelumnya.
 
 2.  **Akses Melalui Browser:**
     *   Buka browser web Anda.
-    *   Ketik `http://localhost/praktikum_php/kontrol_fungsi.php` di bilah alamat dan tekan Enter.
+    *   **Untuk XAMPP:** Ketik `http://localhost/praktikum_php/kontrol_fungsi.php` di bilah alamat dan tekan Enter.
+    *   **Untuk Laragon:** Ketik `http://praktikum_php.test/kontrol_fungsi.php` di bilah alamat dan tekan Enter.
+    *   Amati output yang ditampilkan di browser. Pastikan semua contoh struktur kontrol dan fungsi berjalan sesuai harapan.p://praktikum_php.test/kontrol_fungsi.php` di bilah alamat dan tekan Enter.
     *   Amati output yang ditampilkan di browser. Pastikan semua contoh struktur kontrol dan fungsi berjalan sesuai harapan.
 
 3.  **Eksplorasi Struktur Kondisional:**
@@ -726,12 +667,13 @@ Fungsi adalah kunci untuk membuat kode yang dapat digunakan kembali. Pertimbangk
 
 
 
-<div class="page"/>
+
+<div class="page">
 
 > ## Praktikum 3: Pengenalan MySQL dan Operasi Dasar Database
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami konsep dasar database relasional.
 *   Mengenal komponen-komponen dasar dalam database (tabel, kolom, baris).
 *   Melakukan operasi DDL (Data Definition Language) untuk membuat dan memodifikasi struktur database dan tabel.
@@ -762,12 +704,12 @@ DDL digunakan untuk mendefinisikan atau memodifikasi struktur database dan objek
 
 *   **`CREATE DATABASE`:** Membuat database baru.
     ```sql
-
+    
     CREATE DATABASE nama_database;
     ```
 *   **`CREATE TABLE`:** Membuat tabel baru dalam database.
     ```sql
-
+    
     CREATE TABLE nama_tabel (
         kolom1 TIPE_DATA(ukuran) BATASAN,
         kolom2 TIPE_DATA(ukuran) BATASAN,
@@ -776,19 +718,19 @@ DDL digunakan untuk mendefinisikan atau memodifikasi struktur database dan objek
     ```
 *   **`ALTER TABLE`:** Memodifikasi struktur tabel yang sudah ada (menambah/menghapus kolom, mengubah tipe data).
     ```sql
-
+    
     ALTER TABLE nama_tabel ADD kolom_baru TIPE_DATA;
     ALTER TABLE nama_tabel DROP COLUMN kolom_lama;
     ALTER TABLE nama_tabel MODIFY COLUMN kolom_lama TIPE_DATA_BARU;
     ```
 *   **`DROP DATABASE`:** Menghapus database.
     ```sql
-
+    
     DROP DATABASE nama_database;
     ```
 *   **`DROP TABLE`:** Menghapus tabel.
     ```sql
-
+    
     DROP TABLE nama_tabel;
     ```
 
@@ -797,23 +739,23 @@ DML digunakan untuk memanipulasi data di dalam tabel.
 
 *   **`INSERT INTO`:** Memasukkan baris data baru ke dalam tabel.
     ```sql
-
+    
     INSERT INTO nama_tabel (kolom1, kolom2) VALUES (nilai1, nilai2);
     ```
 *   **`SELECT`:** Mengambil data dari satu atau lebih tabel.
     ```sql
-
+    
     SELECT kolom1, kolom2 FROM nama_tabel WHERE kondisi;
     SELECT * FROM nama_tabel;
     ```
 *   **`UPDATE`:** Memperbarui data yang sudah ada dalam tabel.
     ```sql
-
+    
     UPDATE nama_tabel SET kolom1 = nilai_baru WHERE kondisi;
     ```
 *   **`DELETE FROM`:** Menghapus baris data dari tabel.
     ```sql
-
+    
     DELETE FROM nama_tabel WHERE kondisi;
     ```
 
@@ -861,7 +803,7 @@ CREATE TABLE mahasiswa (
 ```sql
 
 INSERT INTO mahasiswa (nim, nama, jurusan, email) VALUES
-('2023001', 'Yamin bae', 'Teknik Informatika', 'yamin.s@example.com'),
+('2023001', 'Budi Santoso', 'Teknik Informatika', 'budi.s@example.com'),
 ('2023002', 'Siti Aminah', 'Sistem Informasi', 'siti.a@example.com'),
 ('2023003', 'Agus Salim', 'Teknik Informatika', 'agus.s@example.com');
 ```
@@ -881,7 +823,7 @@ SELECT nim, nama FROM mahasiswa WHERE jurusan = 'Teknik Informatika';
 **7. Memperbarui Data Mahasiswa:**
 ```sql
 
-UPDATE mahasiswa SET email = 'yamin.bae@example.com' WHERE nim = '2023001';
+UPDATE mahasiswa SET email = 'budi.santoso@example.com' WHERE nim = '2023001';
 ```
 
 **8. Menghapus Data Mahasiswa:**
@@ -905,7 +847,7 @@ DROP DATABASE db_akademik;
 ### 5. Langkah-langkah Praktikum
 
 1.  **Akses phpMyAdmin:**
-    *   Pastikan Apache dan MySQL di XAMPP Control Panel Anda berjalan.
+    *   Pastikan Apache dan MySQL di XAMPP Control Panel Anda berjalan, atau Laragon Anda sudah di-Start All.
     *   Buka browser web Anda dan ketik `http://localhost/phpmyadmin` di bilah alamat.
 
 2.  **Membuat Database Baru:**
@@ -933,7 +875,7 @@ DROP DATABASE db_akademik;
     *   Amati hasil yang hanya menampilkan mahasiswa dari jurusan Teknik Informatika.
 
 7.  **Memperbarui Data:**
-    *   Di tab `SQL`, jalankan query `UPDATE mahasiswa SET email = 'Yamin.bae@example.com' WHERE nim = '2023001';`.
+    *   Di tab `SQL`, jalankan query `UPDATE mahasiswa SET email = 'budi.santoso@example.com' WHERE nim = '2023001';`.
     *   Kembali ke tab `Browse` untuk memverifikasi bahwa email mahasiswa dengan NIM 2023001 telah diperbarui.
 
 8.  **Menghapus Data:**
@@ -952,13 +894,14 @@ DROP DATABASE db_akademik;
 [2] phpMyAdmin. (n.d.). *About*. Retrieved from [https://www.phpmyadmin.net/about/](https://www.phpmyadmin.net/about/)
 
 
-<div class="page"/>
 
+
+<div class="page">
 
 > ## Praktikum 4: Form Handling dan Validasi
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami cara kerja form HTML dalam mengirimkan data ke server PHP.
 *   Menggunakan superglobal `$_GET` dan `$_POST` untuk mengambil data dari form.
 *   Melakukan validasi data sederhana di sisi server untuk memastikan integritas data.
@@ -1192,12 +1135,14 @@ Penting untuk selalu melakukan validasi sisi server, bahkan jika Anda sudah mela
 ### 5. Langkah-langkah Praktikum
 
 1.  **Buat File Form:**
-    *   Buka editor teks Anda.
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Salin dan tempel kode dari bagian "Contoh Kode" di atas ke dalam file baru.
-    *   Simpan file tersebut dengan nama `form_pendaftaran.php` di dalam folder `htdocs/praktikum_php`.
+    *   Simpan file tersebut dengan nama `form_pendaftaran.php` di dalam folder `htdocs/praktikum_php` (XAMPP) atau `www/praktikum_php` (Laragon).
 
 2.  **Akses Melalui Browser:**
-    *   Buka browser web Anda dan ketik `http://localhost/praktikum_php/form_pendaftaran.php`.
+    *   Buka browser web Anda.
+    *   **Untuk XAMPP:** Ketik `http://localhost/praktikum_php/form_pendaftaran.php` di bilah alamat dan tekan Enter.
+    *   **Untuk Laragon:** Ketik `http://praktikum_php.test/form_pendaftaran.php` di bilah alamat dan tekan Enter.
     *   Amati form yang ditampilkan.
 
 3.  **Uji Validasi Kosong:**
@@ -1227,12 +1172,15 @@ Penting untuk selalu melakukan validasi sisi server, bahkan jika Anda sudah mela
 
 
 
-<div class="page"/>
+
+<div class="page">
 
 > ## Praktikum 5: Koneksi PHP ke MySQL dan CRUD
 
+
+
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Membuat koneksi ke database MySQL dari aplikasi PHP.
 *   Melakukan operasi Create, Read, Update, dan Delete (CRUD) pada data di database menggunakan PHP.
 *   Memahami pentingnya prepared statements untuk keamanan.
@@ -1728,25 +1676,29 @@ exit();
 
 1.  **Pastikan Database dan Tabel Siap:**
     *   Pastikan Anda telah membuat database `db_akademik` dan tabel `mahasiswa` dari Praktikum 3. Jika belum, kembali ke Praktikum 3 dan selesaikan langkah-langkahnya.
-    *   Pastikan modul Apache dan MySQL di XAMPP Control Panel Anda berjalan.
+    *   Pastikan modul Apache dan MySQL di XAMPP Control Panel Anda berjalan, atau Laragon Anda sudah di-Start All.
 
 2.  **Buat File `koneksi.php`:**
-    *   Buat file baru bernama `koneksi.php` di folder `htdocs/praktikum_php`.
+    *   Buka editor teks favorit Anda (misalnya VS Code).
+    *   Buat file baru bernama `koneksi.php` di folder `htdocs/praktikum_php` (XAMPP) atau `www/praktikum_php` (Laragon).
     *   Salin dan tempel kode `koneksi.php` dari bagian "Contoh Kode" di atas.
 
 3.  **Buat File `tambah_mahasiswa.php`:**
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Buat file baru bernama `tambah_mahasiswa.php` di folder yang sama.
     *   Salin dan tempel kode `tambah_mahasiswa.php`.
-    *   Akses melalui browser: `http://localhost/praktikum_php/tambah_mahasiswa.php`.
+    *   Akses melalui browser: `http://localhost/praktikum_php/tambah_mahasiswa.php` (XAMPP) atau `http://praktikum_php.test/tambah_mahasiswa.php` (Laragon).
     *   Coba tambahkan beberapa data mahasiswa baru.
 
 4.  **Buat File `lihat_mahasiswa.php`:**
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Buat file baru bernama `lihat_mahasiswa.php` di folder yang sama.
     *   Salin dan tempel kode `lihat_mahasiswa.php`.
-    *   Akses melalui browser: `http://localhost/praktikum_php/lihat_mahasiswa.php`.
+    *   Akses melalui browser: `http://localhost/praktikum_php/lihat_mahasiswa.php` (XAMPP) atau `http://praktikum_php.test/lihat_mahasiswa.php` (Laragon).
     *   Verifikasi bahwa data mahasiswa yang Anda tambahkan (dan data dari Praktikum 3 jika ada) ditampilkan dalam tabel.
 
 5.  **Buat File `edit_mahasiswa.php`:**
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Buat file baru bernama `edit_mahasiswa.php` di folder yang sama.
     *   Salin dan tempel kode `edit_mahasiswa.php`.
     *   Dari halaman `lihat_mahasiswa.php`, klik link `Edit` pada salah satu baris data.
@@ -1754,6 +1706,7 @@ exit();
     *   Verifikasi perubahan di halaman `lihat_mahasiswa.php`.
 
 6.  **Buat File `hapus_mahasiswa.php`:**
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Buat file baru bernama `hapus_mahasiswa.php` di folder yang sama.
     *   Salin dan tempel kode `hapus_mahasiswa.php`.
     *   Dari halaman `lihat_mahasiswa.php`, klik link `Hapus` pada salah satu baris data.
@@ -1778,12 +1731,12 @@ exit();
 
 
 
-<div class="page"/>
+<div class="page">
 
 > ## Praktikum 6: Session dan Cookie Management
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami konsep dan perbedaan antara session dan cookie.
 *   Menggunakan session untuk menyimpan data pengguna antar halaman.
 *   Menggunakan cookie untuk menyimpan data pengguna di sisi klien.
@@ -2046,24 +1999,25 @@ exit;
 ### 5. Langkah-langkah Praktikum
 
 1.  **Buat File `login.php`:**
-    *   Buat file baru bernama `login.php` di folder `htdocs/praktikum_php`.
+    *   Buka editor teks favorit Anda (misalnya VS Code).
+    *   Buat file baru bernama `login.php` di folder `htdocs/praktikum_php` (XAMPP) atau `www/praktikum_php` (Laragon).
     *   Salin dan tempel kode `login.php` dari bagian "Contoh Kode" di atas.
 
 2.  **Buat File `dashboard.php`:**
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Buat file baru bernama `dashboard.php` di folder yang sama.
     *   Salin dan tempel kode `dashboard.php`.
 
 3.  **Buat File `logout.php`:**
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Buat file baru bernama `logout.php` di folder yang sama.
     *   Salin dan tempel kode `logout.php`.
 
 4.  **Uji Sistem Login:**
-    *   Akses `http://localhost/praktikum_php/login.php` di browser Anda.
+    *   Akses `http://localhost/praktikum_php/login.php` (XAMPP) atau `http://praktikum_php.test/login.php` (Laragon) di browser Anda.
     *   Coba login dengan username `admin` dan password `password123`.
     *   Jika berhasil, Anda akan diarahkan ke `dashboard.php`.
-    *   Coba akses `dashboard.php` langsung tanpa login terlebih dahulu. Anda seharusnya diarahkan kembali ke `login.php`.
-
-5.  **Uji Logout:**
+    *   Coba akses `dashboard.php` langsung tanpa login terlebih dahulu. Anda seharusnya diarahkan kembali ke `login.php`.**Uji Logout:**
     *   Dari `dashboard.php`, klik link `Logout`.
     *   Anda seharusnya diarahkan kembali ke `login.php`.
     *   Coba akses `dashboard.php` lagi untuk memastikan Anda sudah logout.
@@ -2086,13 +2040,13 @@ exit;
 [2] W3Schools. (n.d.). *PHP Sessions*. Retrieved from [https://www.w3schools.com/php/php_sessions.asp](https://www.w3schools.com/php/php_sessions.asp)
 
 
-<div class="page"/>
+<div class="page">
 
 
 > ## Praktikum 7: Konsep Dasar OOP di PHP
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami konsep dasar Object-Oriented Programming (OOP).
 *   Mendefinisikan dan menggunakan kelas (class) dan objek (object) di PHP.
 *   Mengelola properti (properties) dan metode (methods) dalam sebuah kelas.
@@ -2223,7 +2177,7 @@ class AkunPremium extends AkunBank {
     }
 }
 
-$akun1 = new AkunBank("Yamin", 1000000);
+$akun1 = new AkunBank("Budi", 1000000);
 echo "Pemilik: " . $akun1->pemilik . "<br>";
 echo "Saldo: " . $akun1->getSaldo() . "<br>";
 $akun1->setor(500000);
@@ -2362,7 +2316,7 @@ Pewarisan adalah alat yang ampuh untuk penggunaan kembali kode dan membangun hie
     }
 
     // Membuat Objek Karyawan
-    $karyawan1 = new Karyawan("Yamin bae", "Staff IT", 5000000);
+    $karyawan1 = new Karyawan("Budi Santoso", "Staff IT", 5000000);
     $karyawan1->setTunjangan(200000);
     echo $karyawan1->getInfo() . "<br>";
     echo "Gaji Total Karyawan 1: " . $karyawan1->hitungGajiTotal() . "<br>";
@@ -2414,12 +2368,14 @@ Pewarisan adalah alat yang ampuh untuk penggunaan kembali kode dan membangun hie
 ### 5. Langkah-langkah Praktikum
 
 1.  **Buat File `oop_dasar.php`:**
-    *   Buka editor teks Anda.
+    *   Buka editor teks favorit Anda (misalnya VS Code).
     *   Salin dan tempel kode dari bagian "Contoh Kode" di atas ke dalam file baru.
-    *   Simpan file tersebut dengan nama `oop_dasar.php` di dalam folder `htdocs/praktikum_php`.
+    *   Simpan file tersebut dengan nama `oop_dasar.php` di dalam folder `htdocs/praktikum_php` (XAMPP) atau `www/praktikum_php` (Laragon).
 
 2.  **Akses Melalui Browser:**
-    *   Buka browser web Anda dan ketik `http://localhost/praktikum_php/oop_dasar.php`.
+    *   Buka browser web Anda.
+    *   **Untuk XAMPP:** Ketik `http://localhost/praktikum_php/oop_dasar.php` di bilah alamat dan tekan Enter.
+    *   **Untuk Laragon:** Ketik `http://praktikum_php.test/oop_dasar.php` di bilah alamat dan tekan Enter.
     *   Amati output yang ditampilkan. Perhatikan pesan konstruktor dan destruktor, serta informasi karyawan dan manajer.
 
 3.  **Eksplorasi Properti dan Metode:**
@@ -2447,12 +2403,13 @@ Gaji Total Karyawan 1: " . $karyawan1->hitungGajiTotal() . "<br>";`). Amati erro
 
 
 
-<div class="page"/>
+
+<div class="page">
 
 > ## Praktikum 8: Pengenalan Konsep MVC
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami arsitektur Model-View-Controller (MVC) sebagai pola desain perangkat lunak.
 *   Mengenali peran dan tanggung jawab masing-masing komponen (Model, View, Controller).
 *   Menerapkan konsep MVC dalam proyek PHP sederhana tanpa menggunakan framework.
@@ -2756,13 +2713,14 @@ class TaskController {
 [1] Wikipedia. (n.d.). *Model–view–controller*. Retrieved from [https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 [2] GeeksforGeeks. (n.d.). *MVC Architecture in PHP*. Retrieved from [https://www.geeksforgeeks.org/mvc-architecture-in-php/](https://www.geeksforgeeks.org/mvc-architecture-in-php/)
 
+<div class="page">
 
-<div class="page"/>
+
 
 > ## Praktikum 9: Instalasi dan Konfigurasi CodeIgniter 4
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Memahami konsep dasar framework PHP dan keuntungannya.
 *   Menginstal CodeIgniter 4 menggunakan Composer.
 *   Memahami struktur direktori dasar proyek CodeIgniter 4.
@@ -2796,9 +2754,10 @@ Composer adalah alat manajemen dependensi untuk PHP. Ini memungkinkan Anda mende
 
 **Langkah-langkah Instalasi:**
 1.  **Pastikan Composer Terinstal:** Jika belum, unduh dan instal Composer dari [getcomposer.org](https://getcomposer.org/).
-2.  **Buka Terminal/CMD:** Navigasikan ke direktori `htdocs` (atau `www` untuk LAMPP) Anda.
+2.  **Buka Terminal/CMD (atau Terminal di VS Code):** Navigasikan ke direktori `htdocs` (untuk XAMPP) atau `www` (untuk Laragon) Anda. Pastikan Anda berada di direktori tempat Anda ingin membuat proyek CodeIgniter.
 3.  **Jalankan Perintah Composer:**
     ```bash
+    
     composer create-project codeigniter4/appstarter project-ci4
     ```
     Perintah ini akan membuat folder baru bernama `project-ci4` yang berisi instalasi CodeIgniter 4.
@@ -2839,6 +2798,7 @@ project-ci4/
 File `.env` digunakan untuk menyimpan konfigurasi sensitif atau spesifik lingkungan. Salin file `env` ke `.env` dan sesuaikan.
 
 ```bash
+
 cp .env.example .env
 ```
 
@@ -2852,6 +2812,7 @@ Buka `app/Config/Database.php` atau atur di `.env`.
 **Menggunakan `.env` (Direkomendasikan):**
 Tambahkan baris berikut di file `.env` Anda:
 ```
+
 database.default.hostname = localhost
 database.default.database = db_akademik # Ganti dengan nama database Anda
 database.default.username = root
@@ -2908,19 +2869,21 @@ Pastikan Anda telah menginstal Composer dengan benar dan semua ekstensi PHP yang
 ### 4. Contoh Kode
 
 Kita akan membuat controller dan view sederhana untuk menguji routing.
+1.  **Instalasi CodeIgniter 4:**
+    *   Buka terminal/CMD (atau terminal di VS Code) Anda.
+    *   Navigasikan ke direktori `htdocs` (untuk XAMPP) atau `www` (untuk Laragon) Anda.
+    *   Jalankan perintah: `composer create-project codeigniter4/appstarter ci4_app`
+    *   Pastikan Anda dapat mengakses halaman selamat datang di `http://localhost/ci4_app/public` (untuk XAMPP) atau `http://ci4_app.test` (untuk Laragon).
 
-**1. Instalasi CodeIgniter:**
-*   Buka terminal/CMD Anda.
-*   Navigasikan ke direktori `htdocs` (atau `www`).
-*   Jalankan perintah: `composer create-project codeigniter4/appstarter ci4_app`
-
-**2. Konfigurasi `.env`:**
-*   Navigasikan ke folder `ci4_app`.
-*   Salin `env` menjadi `.env` (`cp env .env` di Linux/macOS, `copy env .env` di Windows CMD).
-*   Buka file `.env` dan ubah baris berikut:
+2.  **Konfigurasi `.env`:**
+    *   Navigasikan ke folder `ci4_app`.
+    *   Salin `env` menjadi `.env` (`cp env .env` di Linux/macOS, `copy env .env` di Windows CMD).
+    *   Buka file `.env` menggunakan editor teks Anda (misalnya VS Code) dan ubah baris berikut:
     ```
+
     CI_ENVIRONMENT = development
-    app.baseURL = 'http://localhost/ci4_app/'
+    app.baseURL = 'http://localhost/ci4_app/' # Untuk XAMPP
+    # app.baseURL = 'http://ci4_app.test/' # Untuk Laragon
     ```
 
 **3. Buat Controller Baru (`app/Controllers/Produk.php`):**
@@ -3036,14 +2999,14 @@ $routes->get('/produk/(:num)', 'Produk::detail/$1');
 [3] Composer. (n.d.). *Getting Started*. Retrieved from [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
 
 
+<div class="page">
 
-<div class="page"/>
 
 
 > ## Praktikum 10: CRUD dengan CodeIgniter 4
 
 ### 1. Tujuan Pembelajaran
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
+Setelah menyelesaikan praktikum ini, peserta diharapkan mampu:
 *   Mengimplementasikan operasi Create, Read, Update, dan Delete (CRUD) menggunakan CodeIgniter 4.
 *   Membuat Model untuk berinteraksi dengan database.
 *   Menggunakan Query Builder CodeIgniter untuk operasi database.
@@ -3056,6 +3019,7 @@ Model adalah kelas yang dirancang untuk bekerja dengan informasi dalam database.
 
 Untuk membuat Model, Anda dapat menggunakan perintah `spark`:
 ```bash
+
 php spark make:model NamaModel
 ```
 
