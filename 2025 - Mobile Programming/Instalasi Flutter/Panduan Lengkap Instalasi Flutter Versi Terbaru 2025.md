@@ -1,10 +1,9 @@
 # Panduan Lengkap Instalasi Flutter dengan Emulator (Tanpa Android Studio) di Windows dan Git, Visual Studio Code (Versi Terbaru 2025)
 
-Oleh: Manus AI
 
 ## Pendahuluan
 
-Panduan ini akan memandu Anda melalui proses instalasi Flutter SDK, konfigurasi lingkungan pengembangan, serta menyiapkan emulator Android di sistem operasi Windows, tanpa perlu menginstal Android Studio yang memakan banyak ruang. Kami juga akan membahas instalasi Git dan Visual Studio Code, dua alat penting dalam pengembangan Flutter. Panduan ini dirancang untuk versi terbaru tahun 2025, memastikan Anda mendapatkan informasi yang paling relevan dan mutakhir.
+Panduan ini akan memandu Anda melalui proses instalasi Flutter SDK, konfigurasi lingkungan pengembangan, serta menyiapkan emulator Android di sistem operasi Windows, tanpa perlu menginstal Android Studio yang memakan banyak ruang. Kita juga akan membahas instalasi Git dan Visual Studio Code, dua alat penting dalam pengembangan Flutter. Panduan ini dirancang untuk versi terbaru tahun 2025, memastikan Anda mendapatkan informasi yang paling relevan dan mutakhir.
 
 Flutter adalah UI toolkit dari Google untuk membangun aplikasi yang dikompilasi secara _natively_ untuk _mobile_, _web_, dan _desktop_ dari satu _codebase_. Dengan Flutter, Anda dapat membuat aplikasi yang indah dan berperforma tinggi dengan cepat. Untuk memulai pengembangan Flutter, Anda memerlukan lingkungan yang tepat, dan panduan ini akan membantu Anda menyiapkannya langkah demi langkah.
 
@@ -17,9 +16,9 @@ Sebelum memulai instalasi, pastikan sistem Anda memenuhi prasyarat berikut:
 *   **Koneksi Internet:** Koneksi internet yang stabil untuk mengunduh file-file yang diperlukan.
 
 
+<div class="page"/>
 
-
-## 1. Instalasi Git
+> ## 1. Instalasi Git
 
 Git adalah sistem kontrol versi terdistribusi yang sangat penting dalam pengembangan perangkat lunak, termasuk Flutter. Anda akan menggunakannya untuk mengelola versi kode Anda dan juga untuk mengunduh Flutter SDK itu sendiri. [1]
 
@@ -42,20 +41,25 @@ Git adalah sistem kontrol versi terdistribusi yang sangat penting dalam pengemba
 
     git --version
     ```
-    Jika instalasi berhasil, Anda akan melihat versi Git yang terinstal.
+    Jika instalasi berhasil, Anda akan melihat versi Git yang terinstal, sepert berikut :
+
+    ```bash
+
+    git version 2.50.1.windows.1
+    ```
+Selamat anda sudah Berhasil install Git.
 
 
+<div class="page"/>
 
+> ## 2. Instalasi Flutter SDK
 
-## 2. Instalasi Flutter SDK
-
-Ada dua cara utama untuk menginstal Flutter SDK: melalui ekstensi VS Code atau mengunduh bundel Flutter secara manual. Kami akan fokus pada metode manual karena panduan ini bertujuan untuk memberikan kontrol lebih.
+Ada dua cara utama untuk menginstal Flutter SDK: melalui ekstensi VS Code atau mengunduh bundel Flutter secara manual. Kita akan fokus pada metode manual karena panduan ini bertujuan untuk memberikan kontrol lebih.
 
 ### Langkah-langkah Instalasi Flutter SDK (Manual):
 
 1.  **Unduh Flutter SDK:**
     Kunjungi halaman unduhan resmi Flutter SDK untuk Windows di `https://docs.flutter.dev/get-started/install/windows/mobile`. Unduh file `.zip` versi stabil terbaru. 
-    
       <img src="img/flutter-sdk.png" style="border-radius:10px">
 
 2.  **Ekstrak File:**
