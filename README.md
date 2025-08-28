@@ -44,18 +44,9 @@ Setiap modul kemudian diekspor ke **PDF** untuk memudahkan distribusi dan cetak.
 ⚡ **Keuntungan pendekatan ini**:  
 - Konten **versi teks** (Markdown) tetap ada di repo → mudah difork, dikembangkan, & dikolaborasikan.  
 - PDF bisa langsung dipakai untuk pembelajaran offline/online.  
-- Style bisa dikustomisasi dengan CSS/LaTeX agar tampilan rapi & konsisten.  
+- Style bisa dikustomisasi dengan CSS agar tampilan rapi & konsisten.  
 
 ---
 
-## 📂 Struktur Repo
-- **Mobile Programming**  
-- **Pemrograman III (PHP-MySQL)**  
-- **Python Programming**  
-- **Samsung Innovation Campus Batch**  
-- **Web Programming**  
-- **styles**
-
----
 
 ✨ Selamat eksplorasi & jangan lupa kasih ⭐ kalau repo ini bermanfaat!
