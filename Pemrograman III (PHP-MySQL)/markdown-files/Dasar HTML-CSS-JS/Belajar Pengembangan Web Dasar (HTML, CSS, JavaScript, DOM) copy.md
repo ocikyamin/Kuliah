@@ -14,25 +14,6 @@ Setelah menyelesaikan modul ini, mahasiswa diharapkan mampu:
 * Memanipulasi elemen-elemen HTML dan CSS secara dinamis menggunakan Document Object Model (DOM).
 * Mengembangkan aplikasi web sederhana yang interaktif dan responsif.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat" alt="HTML5" height="40"/>
-  <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat" alt="CSS3" height="40"/>
-  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat" alt="JavaScript" height="40"/>
-</p>
-
----
-
-## 📥 Akses & Download File
-
-File PDF ini juga tersedia secara online dan dapat diakses atau didownload langsung melalui repositori GitHub :
-👉 [https://github.com/ocikyamin/OpenLearning](https://github.com/ocikyamin/OpenLearning)
-
-Di repositori tersebut tersedia semua modul dalam format **Markdown (.md)** dan juga **PDF (.pdf)**, sehingga bisa dipelajari secara offline maupun online.
-
-
-
-
-
 <div class="page"/>
 
 > ## Bagian 1: Pengantar HTML (Struktur dan Semantik)
@@ -573,6 +554,506 @@ Perbaiki tampilan halaman web pribadi Anda dari Penugasan Pertemuan 1 menggunaka
 
 <div class="page"/>
 
+<!-- > ## Pertemuan 3: JavaScript Dasar (Variabel, Tipe Data, Operator, Kondisional) -->
+
+<!-- ### Tujuan Pembelajaran -->
+
+Pada akhir pertemuan ini, mahasiswa diharapkan mampu:
+
+1.  Memahami peran JavaScript dalam pengembangan web interaktif.
+2.  Mendeklarasikan dan menggunakan variabel dengan benar.
+3.  Mengenali dan bekerja dengan berbagai tipe data JavaScript.
+4.  Menggunakan operator aritmatika, perbandingan, dan logika.
+5.  Mengimplementasikan struktur kontrol kondisional (`if`, `else if`, `else`, `switch`).
+6.  Memahami konsep dasar input dan output menggunakan `alert()`, `prompt()`, dan `console.log()`.
+
+<!-- ### Materi -->
+
+JavaScript adalah bahasa pemrograman yang memungkinkan Anda mengimplementasikan hal-hal kompleks pada halaman web. Setiap kali Anda melihat peta interaktif, animasi grafis 2D/3D, atau pembaruan konten yang dinamis, kemungkinan besar JavaScript terlibat.
+
+**1. Cara Menyisipkan JavaScript**
+
+Ada dua cara utama untuk menyisipkan JavaScript ke dalam dokumen HTML:
+
+*   **Internal Script**: Di dalam elemen `<script>` di bagian `<head>` atau `<body>` dokumen HTML. Disarankan di akhir `<body>` agar HTML dimuat terlebih dahulu.
+    ```html
+
+    <body>
+        <!-- Konten HTML lainnya -->
+        <script>
+            console.log("Halo dari JavaScript internal!");
+        </script>
+    </body>
+    ```
+*   **External Script**: File `.js` terpisah yang dihubungkan ke dokumen HTML menggunakan elemen `<script>` dengan atribut `src`. (Paling disarankan)
+    ```html
+
+    <body>
+        <!-- Konten HTML lainnya -->
+        <script src="script.js"></script>
+    </body>
+    ```
+
+**2. Variabel**
+
+Variabel digunakan untuk menyimpan nilai data. JavaScript memiliki tiga kata kunci untuk mendeklarasikan variabel:
+
+*   `var`: Deklarasi lama, memiliki cakupan fungsi.
+*   `let`: Deklarasi modern, memiliki cakupan blok, bisa diubah nilainya.
+*   `const`: Deklarasi modern, memiliki cakupan blok, tidak bisa diubah nilainya (konstan).
+
+```javascript
+
+let nama = "Yamin";
+const umur = 25;
+var pekerjaan = "Mahasiswa";
+
+console.log(nama); // Output: Yamin
+console.log(umur); // Output: 25
+```
+
+**3. Tipe Data**
+
+JavaScript memiliki beberapa tipe data dasar:
+
+*   **Primitive Data Types**:
+    *   `String`: Teks (misalnya, `
+
+
+"Halo", "123").
+    *   `Number`: Angka (misalnya, `10`, `3.14`).
+    *   `Boolean`: `true` atau `false`.
+    *   `Undefined`: Variabel yang dideklarasikan tetapi belum diberi nilai.
+    *   `Null`: Nilai yang sengaja tidak ada.
+    *   `Symbol` (ES6):
+    *   `BigInt` (ES11):
+*   **Non-Primitive Data Types**:
+    *   `Object`: Kumpulan pasangan key-value (misalnya, `{}`, `[]`).
+
+**4. Operator**
+
+*   **Aritmatika**: `+`, `-`, `*`, `/`, `%` (modulus), `**` (eksponen).
+*   **Perbandingan**: `==` (sama nilai), `===` (sama nilai dan tipe), `!=` (tidak sama nilai), `!==` (tidak sama nilai atau tipe), `>`, `<`, `>=`, `<=`.
+*   **Logika**: `&&` (AND), `||` (OR), `!` (NOT).
+*   **Penugasan**: `=`, `+=`, `-=`, `*=`.
+
+```javascript
+
+let a = 10;
+let b = 5;
+
+console.log(a + b); // 15
+console.log(a > b); // true
+console.log(a === '10'); // false (tipe berbeda)
+```
+
+**5. Struktur Kontrol Kondisional**
+
+*   **`if`, `else if`, `else`**:
+    ```javascript
+
+    let nilai = 75;
+
+    if (nilai >= 80) {
+        console.log("Nilai A");
+    } else if (nilai >= 70) {
+        console.log("Nilai B");
+    } else {
+        console.log("Nilai C");
+    }
+    ```
+*   **`switch`**:
+    ```javascript
+
+    let hari = "Senin";
+
+    switch (hari) {
+        case "Senin":
+            console.log("Hari kerja");
+            break;
+        case "Minggu":
+            console.log("Hari libur");
+            break;
+        default:
+            console.log("Bukan hari Senin atau Minggu");
+    }
+    ```
+
+**6. Input/Output Dasar**
+
+*   `alert()`: Menampilkan kotak dialog peringatan.
+*   `prompt()`: Menampilkan kotak dialog dengan input teks.
+*   `console.log()`: Menampilkan output di konsol browser (untuk debugging).
+
+<!-- ### Pembahasan -->
+
+JavaScript adalah bahasa yang dinamis dan fleksibel. Memahami variabel, tipe data, operator, dan struktur kondisional adalah fundamental untuk menulis logika program yang efektif. Praktikum ini akan melatih mahasiswa untuk berpikir secara algoritmik dan menerapkan konsep-konsep dasar JavaScript untuk memecahkan masalah sederhana.
+
+<!-- ### Contoh Kode -->
+
+Berikut adalah contoh kode JavaScript yang meminta input nama dan menampilkan pesan personalisasi:
+
+**`script.js`**
+
+```javascript
+
+// Meminta input nama dari pengguna
+let namaPengguna = prompt("Masukkan nama Anda:");
+
+// Memeriksa apakah namaPengguna tidak kosong atau null
+if (namaPengguna) {
+    // Menampilkan pesan sapaan personalisasi
+    alert("Halo, " + namaPengguna + "! Selamat datang di dunia JavaScript.");
+    console.log("Pengguna bernama " + namaPengguna + " telah masuk.");
+
+    // Contoh penggunaan operator dan kondisional
+    let tahunLahir = prompt("Tahun berapa Anda lahir?");
+    let tahunSekarang = new Date().getFullYear();
+    let umur = tahunSekarang - parseInt(tahunLahir);
+
+    if (umur >= 17) {
+        console.log("Anda sudah cukup umur untuk memiliki KTP.");
+    } else {
+        console.log("Anda belum cukup umur untuk memiliki KTP.");
+    }
+
+} else {
+    alert("Nama tidak boleh kosong!");
+    console.log("Pengguna membatalkan atau tidak memasukkan nama.");
+}
+```
+
+**`index.html` (untuk menghubungkan `script.js`)**
+
+```html
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaScript Dasar</title>
+</head>
+<body>
+    <h1>Lihat Konsol Browser untuk Output!</h1>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+<!-- > ### PRAKTIKUM 3 JS -->
+Langkah-langkah Praktikum
+
+1.  Buat folder baru dengan nama `NIM_NAMA_PRAKTIKUM_JS`.
+2.  Di dalam folder tersebut buat file `index.html` dan `script.js`.
+3.  Salin kode `index.html` di atas ke dalam `index.html` Anda.
+4.  Salin kode `script.js` di atas ke dalam `script.js` Anda.
+5.  Buka `index.html` di browser Anda. Perhatikan kotak dialog `prompt` dan `alert` yang muncul.
+6.  Buka konsol browser (biasanya dengan menekan F12 atau klik kanan -> Inspect -> Console) untuk melihat output `console.log()`.
+7.  Eksplorasi:
+    *   Ubah pesan `alert` dan `prompt`.
+    *   Tambahkan variabel baru dengan tipe data berbeda (misalnya, boolean).
+    *   Buat kondisi `if-else if-else` yang lebih kompleks berdasarkan input pengguna.
+    *   Coba gunakan operator logika (`&&`, `||`) dalam kondisi Anda.
+
+<!-- ### TUGAS 3 JS 1 -->
+
+Buatlah program JavaScript sederhana yang:
+
+1.  Meminta pengguna memasukkan dua angka.
+2.  Meminta pengguna memilih operasi aritmatika (`+`, `-`, `*`, `/`).
+3.  Melakukan perhitungan berdasarkan pilihan pengguna.
+4.  Menampilkan hasil perhitungan menggunakan `alert()`.
+5.  Menangani kasus pembagian dengan nol (jika angka kedua adalah nol, tampilkan pesan error).
+6.  Gunakan `console.log()` untuk menampilkan setiap langkah proses (input, operasi, hasil).
+
+Kumpulkan file `index.html` dan `script.js` Anda.
+
+
+
+<div class="page"/>
+
+<!-- > ## Pertemuan 4: JavaScript Menengah (Loop, Fungsi, Array, Objek) -->
+
+<!-- ### Tujuan Pembelajaran -->
+
+Pada akhir pertemuan ini, mahasiswa diharapkan mampu:
+
+1.  Menggunakan struktur perulangan (`for`, `while`, `do-while`, `for...of`, `for...in`) untuk mengulang blok kode.
+2.  Mendefinisikan dan memanggil fungsi untuk mengorganisir kode dan menghindari pengulangan.
+3.  Bekerja dengan array untuk menyimpan koleksi data.
+4.  Membuat dan memanipulasi objek untuk merepresentasikan entitas kompleks.
+5.  Memahami konsep dasar fungsi callback dan fungsi panah (arrow functions).
+
+<!-- ### Materi -->
+
+Setelah menguasai dasar-dasar JavaScript, kita akan melangkah lebih jauh ke konsep-konsep menengah yang esensial untuk membangun aplikasi yang lebih kompleks dan terstruktur.
+
+**1. Perulangan (Loops)**
+
+Perulangan digunakan untuk mengeksekusi blok kode berulang kali.
+
+*   **`for` loop**: Digunakan ketika jumlah iterasi diketahui.
+    ```javascript
+
+    for (let i = 0; i < 5; i++) {
+        console.log("Iterasi ke-" + i);
+    }
+    ```
+*   **`while` loop**: Digunakan ketika jumlah iterasi tidak diketahui, perulangan berlanjut selama kondisi `true`.
+    ```javascript
+
+    let count = 0;
+    while (count < 3) {
+        console.log("Hitungan: " + count);
+        count++;
+    }
+    ```
+*   **`do-while` loop**: Mirip dengan `while`, tetapi blok kode dieksekusi setidaknya sekali.
+    ```javascript
+
+    let i = 0;
+    do {
+        console.log("Do-while iterasi: " + i);
+        i++;
+    } while (i < 3);
+    ```
+*   **`for...of` loop**: Mengulang nilai dari objek yang dapat diulang (seperti array, string).
+    ```javascript
+
+    const buah = ["Apel", "Pisang", "Ceri"];
+    for (const b of buah) {
+        console.log(b);
+    }
+    ```
+*   **`for...in` loop**: Mengulang properti (kunci) dari sebuah objek.
+    ```javascript
+
+    const orang = { nama: "Yamin", usia: 30 };
+    for (const kunci in orang) {
+        console.log(kunci + ": " + orang[kunci]);
+    }
+    ```
+
+**2. Fungsi**
+
+Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu. Fungsi membuat kode lebih modular, dapat digunakan kembali, dan mudah dipelihara.
+
+*   **Deklarasi Fungsi**:
+    ```javascript
+
+    function sapa(nama) {
+        return "Halo, " + nama + "!";
+    }
+    console.log(sapa("Ani")); // Output: Halo, Ani!
+    ```
+*   **Ekspresi Fungsi**:
+    ```javascript
+
+    const hitungJumlah = function(a, b) {
+        return a + b;
+    };
+    console.log(hitungJumlah(5, 3)); // Output: 8
+    ```
+*   **Fungsi Panah (Arrow Functions)** (ES6):
+    Sintaks yang lebih ringkas, terutama untuk fungsi anonim.
+    ```javascript
+
+    const kaliDua = (angka) => angka * 2;
+    console.log(kaliDua(7)); // Output: 14
+
+    const sapaLengkap = (namaDepan, namaBelakang) => {
+        return `Halo, ${namaDepan} ${namaBelakang}!`
+    };
+    console.log(sapaLengkap("Abdul", "Yamin"));
+    ```
+
+**3. Array**
+
+Array adalah objek yang digunakan untuk menyimpan koleksi data yang berurutan. Elemen array diakses menggunakan indeks numerik (dimulai dari 0).
+
+*   **Deklarasi Array**:
+    ```javascript
+
+    const angka = [1, 2, 3, 4, 5];
+    const namaSiswa = ["Alice", "Bob", "Charlie"];
+    ```
+*   **Mengakses Elemen**:
+    ```javascript
+
+    console.log(angka[0]); // Output: 1
+    console.log(namaSiswa[1]); // Output: Bob
+    ```
+*   **Metode Array Umum**:
+    *   `push()`: Menambah elemen ke akhir array.
+    *   `pop()`: Menghapus elemen terakhir dari array.
+    *   `unshift()`: Menambah elemen ke awal array.
+    *   `shift()`: Menghapus elemen pertama dari array.
+    *   `length`: Properti untuk mendapatkan jumlah elemen.
+    *   `indexOf()`: Mencari indeks elemen.
+    *   `forEach()`, `map()`, `filter()`, `reduce()`: Untuk iterasi dan transformasi array.
+
+**4. Objek**
+
+Objek adalah kumpulan properti, di mana setiap properti memiliki nama (kunci) dan nilai. Objek digunakan untuk merepresentasikan entitas dunia nyata.
+
+*   **Deklarasi Objek (Object Literal)**:
+    ```javascript
+
+    const buku = {
+        judul: "Filosofi Teras",
+        penulis: "Henry Manampiring",
+        tahunTerbit: 2018,
+        isAvailable: true
+    };
+    ```
+*   **Mengakses Properti**:
+    *   Dot notation: `obj.property`
+    *   Bracket notation: `obj['property']`
+    ```javascript
+
+    console.log(buku.judul); // Output: Filosofi Teras
+    console.log(buku["penulis"]); // Output: Henry Manampiring
+    ```
+*   **Menambah/Mengubah Properti**:
+    ```javascript
+
+    buku.penerbit = "Kompas";
+    buku.tahunTerbit = 2019;
+    ```
+*   **Menghapus Properti**:
+    ```javascript
+
+    delete buku.isAvailable;
+    ```
+
+<!-- ### Pembahasan -->
+
+Perulangan, fungsi, array, dan objek adalah pilar penting dalam pemrograman JavaScript. Menguasai konsep-konsep ini memungkinkan mahasiswa untuk menulis kode yang lebih efisien, terstruktur, dan dapat diskalakan. Fungsi memungkinkan modularitas, array menangani koleksi data, dan objek merepresentasikan data yang lebih kompleks. Pemahaman mendalam tentang topik ini akan menjadi dasar yang kuat untuk manipulasi DOM dan pengembangan aplikasi web yang lebih interaktif.
+
+<!-- ### Contoh Kode -->
+
+Berikut adalah contoh kode JavaScript yang mengilustrasikan penggunaan loop, fungsi, array, dan objek:
+
+**`script.js`**
+
+```javascript
+
+// 1. Contoh Penggunaan Array dan Loop
+const daftarMahasiswa = [
+    { nama: "Andi", nilai: 85 },
+    { nama: "Yamin", nilai: 70 },
+    { nama: "Citra", nilai: 92 },
+    { nama: "Dewi", nilai: 60 }
+];
+
+console.log("\nDaftar Nilai Mahasiswa:");
+for (let i = 0; i < daftarMahasiswa.length; i++) {
+    const mhs = daftarMahasiswa[i];
+    console.log(`${mhs.nama}: ${mhs.nilai}`);
+}
+
+// 2. Contoh Fungsi untuk Menghitung Rata-rata Nilai
+function hitungRataRata(dataMahasiswa) {
+    let totalNilai = 0;
+    for (const mhs of dataMahasiswa) {
+        totalNilai += mhs.nilai;
+    }
+    return totalNilai / dataMahasiswa.length;
+}
+
+const rataRata = hitungRataRata(daftarMahasiswa);
+console.log(`\nRata-rata nilai kelas: ${rataRata.toFixed(2)}`);
+
+// 3. Contoh Fungsi Panah dan Filter Array
+const mahasiswaLulus = daftarMahasiswa.filter(mhs => mhs.nilai >= 75);
+console.log("\nMahasiswa yang Lulus (nilai >= 75):");
+mahasiswaLulus.forEach(mhs => {
+    console.log(`${mhs.nama} (${mhs.nilai})`);
+});
+
+// 4. Contoh Objek dengan Metode
+const kalkulator = {
+    tambah: (a, b) => a + b,
+    kurang: (a, b) => a - b,
+    kali: (a, b) => a * b,
+    bagi: (a, b) => {
+        if (b === 0) {
+            return "Error: Pembagian dengan nol!";
+        } else {
+            return a / b;
+        }
+    }
+};
+
+console.log("\nOperasi Kalkulator:");
+console.log(`5 + 3 = ${kalkulator.tambah(5, 3)}`);
+console.log(`10 - 4 = ${kalkulator.kurang(10, 4)}`);
+console.log(`6 * 7 = ${kalkulator.kali(6, 7)}`);
+console.log(`10 / 2 = ${kalkulator.bagi(10, 2)}`);
+console.log(`10 / 0 = ${kalkulator.bagi(10, 0)}`);
+```
+
+**`index.html` (untuk menghubungkan `script.js`)**
+
+```html
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaScript Menengah</title>
+</head>
+<body>
+    <h1>Buka Konsol Browser untuk Melihat Output JavaScript!</h1>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+<!-- > ### PRAKTIKUM 4 JS -->
+Langkah-langkah Praktikum
+
+1.  lanjutan `PRAKTIKUM 4 ` Buat sub folder baru dengan nama `PRAKTIKUM JS 2`.
+2.  Di dalam folder tersebut, buat file `index.html` dan `script.js`.
+3.  Salin kode `index.html` di atas ke dalam `index.html` Anda.
+4.  Salin kode `script.js` di atas ke dalam `script.js` Anda.
+5.  Buka `index.html` di browser Anda.
+6.  Buka konsol browser (F12 atau klik kanan -> Inspect -> Console) untuk melihat output dari `console.log()`.
+7.  Eksplorasi:
+    *   Tambahkan lebih banyak mahasiswa ke `daftarMahasiswa`.
+    *   Buat fungsi baru yang menerima array angka dan mengembalikan angka terbesar.
+    *   Buat objek baru yang merepresentasikan sebuah produk (nama, harga, stok) dan coba akses serta ubah propertinya.
+    *   Gunakan `for...in` loop untuk mengulang properti objek `kalkulator`.
+
+<!-- ### Penugasan -->
+
+Buatlah program JavaScript yang mengelola daftar tugas (To-Do List) sederhana:
+
+1.  Buat sebuah array bernama `daftarTugas` yang berisi beberapa objek tugas. Setiap objek tugas harus memiliki properti `deskripsi` (string) dan `selesai` (boolean).
+    Contoh:
+    ```javascript
+
+    const daftarTugas = [
+        { deskripsi: "Belajar HTML", selesai: true },
+        { deskripsi: "Mengerjakan CSS", selesai: false },
+        { deskripsi: "Mulai JavaScript", selesai: false }
+    ];
+    ```
+2.  Buat fungsi bernama `tambahTugas(deskripsiTugas)` yang menambahkan tugas baru ke `daftarTugas` dengan `selesai: false` secara default.
+3.  Buat fungsi bernama `tandaiSelesai(indeksTugas)` yang mengubah properti `selesai` dari tugas pada indeks tertentu menjadi `true`.
+4.  Buat fungsi bernama `tampilkanTugas()` yang mengulang `daftarTugas` dan menampilkan setiap tugas ke konsol, dengan format: `[x] Deskripsi Tugas` jika sudah selesai, atau `[ ] Deskripsi Tugas` jika belum selesai.
+5.  Panggil fungsi-fungsi tersebut untuk:
+    *   Menambahkan 2-3 tugas baru.
+    *   Menandai salah satu tugas yang belum selesai menjadi selesai.
+    *   Menampilkan semua tugas setelah perubahan.
+
+Kumpulkan file `index.html` dan `script.js` Anda.
+
+
+<div class="page"/>
+
 > ## Bagian 3: Pengenalan DOM (Document Object Model) dan Manipulasi Dasar
 
 ### Tujuan Pembelajaran
@@ -636,7 +1117,6 @@ Ada beberapa metode untuk memilih elemen dari DOM:
         console.log(link.href);
     });
     ```
-<div class="page"/>
 
 **3. Memanipulasi Konten dan Atribut**
 
@@ -676,7 +1156,6 @@ kotak.classList.add('active');
 kotak.classList.remove('hidden');
 kotak.classList.toggle('highlight'); // Menambah jika tidak ada, menghapus jika ada
 ```
-<div class="page"/>
 
 **5. Membuat dan Menghapus Elemen**
 
@@ -704,8 +1183,6 @@ kotak.classList.toggle('highlight'); // Menambah jika tidak ada, menghapus jika 
 ### Pembahasan
 
 Manipulasi DOM adalah inti dari interaktivitas web modern. Dengan DOM, JavaScript dapat merespons tindakan pengguna, memperbarui konten secara real-time, dan menciptakan pengalaman pengguna yang dinamis tanpa perlu memuat ulang halaman. Praktikum ini akan memberikan dasar yang kuat untuk berinteraksi dengan struktur halaman web menggunakan JavaScript.
-
-<div class="page"/>
 
 ### Contoh Kode
 
@@ -804,7 +1281,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 ```
-<div class="page"/>
 
 > ### PRAKTIKUM 3 DOM
 Langkah-langkah Praktikum
@@ -822,7 +1298,7 @@ Langkah-langkah Praktikum
     *   Buat tombol baru yang mengubah ukuran font dari `h1`.
     *   Buat tombol yang menambahkan gambar baru ke halaman.
 
-> ### TUGAS 3 DOM
+### TUGAS 3 DOM
 
 Buatlah halaman web sederhana dengan fungsionalitas berikut menggunakan manipulasi DOM:
 
@@ -899,8 +1375,6 @@ Validasi formulir adalah proses memastikan bahwa input pengguna memenuhi kriteri
     ```
 *   **Pengecekan Kondisi**: Gunakan pernyataan `if/else` untuk memeriksa apakah input kosong, formatnya benar (misalnya, email), atau panjangnya sesuai.
 *   **Memberikan Umpan Balik**: Ubah gaya elemen input (misalnya, border merah), tampilkan pesan error di dekat input, atau gunakan `alert()`.
-
-<div class="page"/>
 
 **3. Integrasi HTML, CSS, dan JavaScript**
 
@@ -1109,7 +1583,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 ```
-<div class="page"/>
 
 > ### PRAKTIKUM 4 DOM LANJUTAN
 Langkah-langkah Praktikum
@@ -1146,3 +1619,4 @@ Buatlah halaman web sederhana yang menampilkan daftar item yang dapat ditambahka
         *   Hapus item `<li>` yang bersangkutan dari daftar.
 
 Kumpulkan file `index.html`, `style.css`, dan `script.js` Anda.
+
